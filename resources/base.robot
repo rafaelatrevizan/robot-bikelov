@@ -7,7 +7,7 @@ ${BASE_URL}     https://bikelov-anunciante.herokuapp.com/
 
 *** Keywords ***
 Start Session
-    Open Browser                    about:blank      chrome
+    Open Browser                    about:blank      headlesschrome
     Set Selenium Implicit Wait      5
     #setar valor mínimo de tela para abrir o navegador
     Set Window Size                 1440    900

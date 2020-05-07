@@ -17,7 +17,11 @@ pipeline {
          steps{
             echo('Executando testes de regressão')
             sh 'robot -d ./logs -e todo tests'
+        }
+        post{
+            always{
             robot otherFiles: '**/*.png', outputPath: 'logs'
+            }
         }
       }
     stage('UAT'){
